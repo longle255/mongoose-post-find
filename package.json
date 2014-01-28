@@ -1,6 +1,6 @@
 {
   "name": "mongoose-post-find",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "Post find and findOne hooks for mongoose",
   "main": "index.js",
   "scripts": {
