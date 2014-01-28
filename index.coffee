@@ -1,4 +1,3 @@
-require 'coffee-trace'
 mongoose = require 'mongoose'
 Model    = mongoose.Model
 Query    = mongoose.Query

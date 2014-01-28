@@ -27,7 +27,6 @@
     "mockgoose": "~1.0.2",
     "should": "~2.0.2",
     "mocha": "~1.14.0",
-    "coffee-trace": "~1.3.4",
     "async": "~0.2.9"
   },
   "readmeFilename": "README.md",
