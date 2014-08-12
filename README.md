@@ -9,7 +9,7 @@ postFind = require('mongoose-post-find')
 
 YourSchema.plugin(postFind, {
 
-  find: function(results, done) {
+  find: function(options, results, done) {
     //Do work on the results
     done(null, results) //Results must be passed to callback
   },
@@ -18,12 +18,12 @@ YourSchema.plugin(postFind, {
   //they will run in the order the array is in.
   findOne: [ 
 
-    function(result, done) {
+    function(options, result, done) {
       //Do something to the result
       done(null, result)
     },
 
-    function(result, done) {
+    function(options, result, done) {
       //Do something to the result
       done(null, result)
     }
