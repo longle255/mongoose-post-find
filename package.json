@@ -1,7 +1,7 @@
 {
-  "name": "mongoose-post-find",
-  "version": "0.0.2",
-  "description": "Post find and findOne hooks for mongoose",
+  "name": "tiniplanet-mongoose-post-find",
+  "version": "0.0.3",
+  "description": "Post find and findOne hooks for mongoose, pass query option to callback",
   "main": "index.js",
   "scripts": {
     "test": "./node_modules/.bin/mocha test",
@@ -9,16 +9,17 @@
   },
   "repository": {
     "type": "git",
-    "url": "git://github.com/idottv/mongoose-post-find.git"
+    "url": "git://github.com/longle255/mongoose-post-find"
   },
   "keywords": [
     "mongoose",
     "post",
     "find",
     "hook",
-    "hooks"
+    "hooks",
+    "tiniplanet"
   ],
-  "author": "taterbase",
+  "author": "Long Le",
   "dependencies": {
     "mongoose": "~3.8.0"
   },
@@ -36,6 +37,6 @@
   },
   "license": " ",
   "bugs": {
-    "url": "https://github.com/idottv/mongoose-post-find/issues"
+    "url": "https://github.com/longle255/mongoose-post-find/issues"
   }
 }

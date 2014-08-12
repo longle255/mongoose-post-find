@@ -19,16 +19,16 @@ describe 'Mongoose Post Find', ->
 
     ArraySchema.plugin postFind,
       find: [
-        (results, done) ->
+        (options, results, done) ->
           results.forEach (result) -> result.name = result.name.toUpperCase()
           done null, results
-        (results, done) ->
+        (options, results, done) ->
           results.forEach (result) -> result.status = 'found'
           done null, results
       ]
 
       findOne: [
-        (result, done) ->
+        (options, result, done) ->
           itemsFetched[result._id] = true
           done null, result
       ]
@@ -74,11 +74,11 @@ describe 'Mongoose Post Find', ->
       name: String
 
     SingleSchema.plugin postFind,
-      find: (results, done) ->
+      find: (options, results, done) ->
         results.forEach (result) -> result.name = result.name.toLowerCase()
         done null, results
 
-      findOne: (result, done) ->
+      findOne: (options, result, done) ->
         result.hasMustache = mustaches[result.name]
         done null, result
 

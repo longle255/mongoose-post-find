@@ -5,6 +5,13 @@ Query    = mongoose.Query
 setHooks = (hooks) ->
   modifyCallback = ->
     args = Array.prototype.slice.call arguments
+    if args.length < 3
+      options = null
+    else 
+      if typeof args[2] is 'function'
+        options = null
+      else
+        options = args[2]
 
     args.forEach (arg, index) ->
       if typeof arg is 'function'
@@ -15,7 +22,7 @@ setHooks = (hooks) ->
           addHook = (index, err, data) ->
             if err then return oldCb err
             if not hooks[index] then return oldCb err, data
-            hooks[index] data, addHook.bind null, index + 1
+            hooks[index] options, data, addHook.bind null, index + 1
 
           addHook 0, err, results
 
