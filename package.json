@@ -1,6 +1,6 @@
 {
   "name": "tiniplanet-mongoose-post-find",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "description": "Post find and findOne hooks for mongoose, pass query option to callback",
   "main": "index.js",
   "scripts": {
